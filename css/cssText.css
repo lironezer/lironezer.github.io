@@ -3,13 +3,13 @@ body{
     /*background-image: url('/Users/lironezer/Documents/GitHub/lironezer.github.io/imgs/blueBG.png');
     background-size: cover; 
     background-repeat: no-repeat; */
+    background: linear-gradient(to left, #143362, #081324);  
     margin:5%;
     font-size: 150%;
     font-family: Arial, "Times New Roman", serif;
     }
     
-    header{
-        background: linear-gradient(to bottom, #192f76, #0b132c);        
+    header{     
         text-align: right;
         padding-bottom: 10px;
     }
