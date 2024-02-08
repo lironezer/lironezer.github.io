@@ -1,7 +1,10 @@
 body{
     direction:rtl;
+    /*background-image: url('/Users/lironezer/Documents/GitHub/lironezer.github.io/imgs/blueBG.png');
+    background-size: cover; 
+    background-repeat: no-repeat; */
     background: linear-gradient(to left, #143362, #081324);  
-    margin:3.5%;
+    margin:5%;
     font-size: 150%;
     font-family: Arial, "Times New Roman", serif;
     }
@@ -33,7 +36,21 @@ body{
         margin-top: 1%;
         float: right;
     }
-
+    
+    summary{
+        font-style: normal;
+    }
+    
+    details{
+        font-style: italic;
+    }
+    
+    footer{
+        background: #ffffff00;
+        height:100px;
+        clear: both;
+    }
+    
     a {
         background-color: #ffffff00;
         color: #ffffff;
@@ -41,6 +58,21 @@ body{
 
     li {
         color: #ffffff;
+    }
+    
+    progress {
+        background: #ff0000;
+    }
+    
+    progress::-webkit-progress-bar {
+        background-color: #666666;	
+    }
+    
+    progress::-webkit-progress-value {
+        background-color: #666666 !important;
+    } 
+    progress::-moz-progress-bar {
+        background-color: #666666 !important;
     }
 
     .border {
@@ -54,6 +86,6 @@ body{
 
     .logo{
         position: absolute; 
-        top: 0px; 
+        top: 0; 
         left: 40px; 
     }    
