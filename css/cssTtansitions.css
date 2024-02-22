@@ -1,0 +1,34 @@
+body{
+    background: linear-gradient(to left, #60a0ff, #396fc1);  
+    margin:5%;
+    font-family: Arial, "Times New Roman", serif;
+    }
+
+
+.fromright{
+    left: 0;
+    position: relative;
+    animation-name: fromright;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes fromright {
+    0%   { left:1920px;}
+    100% {left:1200px;}
+}
+
+
+.fromleft{
+    left: 1920px;
+    position: relative;
+    animation-name: fromleft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes fromleft {
+    0%   { left:0;}
+    100% {left:720px;}
+}
+

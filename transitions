@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/cssTtansitions.css">
+  </head>
+
+<body> 
+<div class="fromleft">
+    <p>טקסט א</p>
+</div>
+
+</body> 
+</html>
