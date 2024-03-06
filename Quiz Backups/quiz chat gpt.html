@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application - Quiz</title>
+    <link rel="stylesheet" type="text/css" href="css/styleQuiz.css"/>
+</head>
+<body>
+    <h1 id="quiz-title">Brooklyn 99 Character Quiz</h1>
+
+    <div id="menu">
+        <div onclick="changePage(1)">Question 1</div>
+        <div onclick="changePage(2)">Question 2</div>
+        <div onclick="changePage(3)">Question 3</div>
+        <div onclick="changePage(4)">Question 4</div>
+        <div onclick="changePage(5)">Question 5</div>
+    </div>
+
+    <div class="question-container" id="page1">
+        <p>What's your ideal weekend activity?</p>
+        <ul>
+            <li onclick="selectAnswer(1, 1)">Solving crimes and catching bad guys</li>
+            <li onclick="selectAnswer(1, 2)">Organizing the perfect party</li>
+            <li onclick="selectAnswer(1, 3)">Relaxing with a good book or movie</li>
+            <li onclick="selectAnswer(1, 3)">Working out and staying fit</li>
+        </ul>
+    </div>
+
+    <div class="question-container" id="page2">
+        <p>Your friends would describe you as:</p>
+        <ul>
+            <li onclick="selectAnswer(1, 1)">Confident and determined</li>
+            <li onclick="selectAnswer(1, 2)">Hilarious and outgoing</li>
+            <li onclick="selectAnswer(1, 3)">Loyal and easygoing</li>
+            <li onclick="selectAnswer(1, 3)">Disciplined and competitive</li>
+        </ul>
+    </div>
+
+    <div class="question-container" id="page3">
+        <p>Which quote resonates with you the most?</p>
+        <ul>
+            <li onclick="selectAnswer(1, 1)">"Cool, cool, cool, no doubt, no doubt, no doubt."</li>
+            <li onclick="selectAnswer(1, 2)">"I'm the human form of the 100 emoji."</li>
+            <li onclick="selectAnswer(1, 3)">"Noice! Smort!"</li>
+            <li onclick="selectAnswer(1, 3)">"Toight, like a toiger."</li>
+        </ul>
+    </div>
+
+    <div class="question-container" id="page4">
+        <p>Your detective skills are put to the test. What's your go-to move?</p>
+        <ul>
+            <li onclick="selectAnswer(1, 1)">Analyzing the crime scene meticulously</li>
+            <li onclick="selectAnswer(1, 2)">Using humor and charm to gather information</li>
+            <li onclick="selectAnswer(1, 3)">Taking a more laid-back approach, letting things unfold</li>
+            <li onclick="selectAnswer(1, 3)">Applying physical strength and agility</li>
+        </ul>
+    </div>
+
+    <div class="question-container" id="page5">
+        <p>What's your favorite snack during stakeouts?</p>
+        <ul>
+            <li onclick="selectAnswer(1, 1)">Something healthy, like carrots</li>
+            <li onclick="selectAnswer(1, 2)">Donuts, obviously</li>
+            <li onclick="selectAnswer(1, 3)">A sandwich, simple and classic</li>
+            <li onclick="selectAnswer(1, 3)">Protein bars for that extra energy boost</li>
+        </ul>
+    </div>
+
+    <!-- Add similar containers for other pages -->
+
+    <div>
+        <span onclick="prevPage()">Previous</span>
+        <span onclick="nextPage()">Next</span>
+    </div>
+
+    <script src="js/quiz chatgpt.js"></script>
+</body>
+</html>

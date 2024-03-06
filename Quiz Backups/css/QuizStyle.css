@@ -1,0 +1,60 @@
+body{
+    background: linear-gradient(to left, #0e0e0e, #121212);  
+    font-family: Arial, "Times New Roman", serif;
+	color:#fff700;
+	font-weight: bold;
+    }
+
+.marked {
+	font-weight: bold;
+    color: #ffffff;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.Headline {
+    font-weight: bold;
+	font-size: 26px;
+	margin-bottom: 75px;
+    margin-top: 35px;
+    color: rgb(255, 255, 255)
+}
+
+
+.qtext {
+	font-weight: bold;
+	font-size: 21px;
+	margin-bottom: 50px;
+	color: #fff700;
+}
+
+.answers {
+	font-weight:normal;
+	cursor:pointer;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 21px;
+}
+
+* {
+	direction:ltr;
+	text-align:center;
+	font-family: Arial;
+	
+}
+
+img {
+	max-height: 300px;
+}
+
+#prev, #next {
+	display: inline;
+	margin: 100px;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+#results {
+	font-size: 100px;
+}

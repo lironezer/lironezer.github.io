@@ -1,0 +1,46 @@
+body{
+    direction:rtl;
+    background: linear-gradient(to left, #80b3ff, #5a98f5);  
+    margin:3%;
+    font-size: 150%;
+    font-family: Arial, "Times New Roman", serif;
+    }
+
+h1{
+    color: #000000;
+}
+
+.page01{
+    display:inline-block;
+        width:100%;
+        margin-top: 1%;
+
+}
+
+.page02{
+    display:inline-block;
+        width:100%;
+        margin-top: 1%;
+
+}
+
+.page03{
+    display:inline-block;
+        width:100%;
+        margin-top: 1%;
+
+}
+
+.page04{
+    display:inline-block;
+        width:100%;
+        margin-top: 1%;
+
+}
+
+.page05{
+    display:inline-block;
+        width:100%;
+        margin-top: 1%;
+
+}

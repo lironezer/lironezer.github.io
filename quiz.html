@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Single Page App
+		</title>		
+		<link rel="stylesheet" type="text/css" href="css/Quiz.css"/>
+	</head>
+
+<body>
+    <img src="imgs/Brooklynblack.png" alt="brooklyn" style="width: 175px; margin-top: 20px;">
+    <h1>Character Quiz</h1>
+
+	<div id="questions">
+		<div id="question0" class="question0 question" style="display:none">
+			<div id="qimage0" class="qimage0 qimage"></div>
+			<div id="answers0" class="divanswers0 divanswers">
+				<div id="answer0_1" onclick="choose(0,1) ; showQuestion1 ()" class="answers0 answers"> First Question </div>
+				<div id="answer0_2" onclick="choose(0,2) ; showQuestion2 ()" class="answers0 answers"> Second Question </div>
+				<div id="answer0_3" onclick="choose(0,3) ; showQuestion3 ()" class="answers0 answers"> Third Question </div>
+				<div id="answer0_4" onclick="choose(0,4) ; showQuestion4 ()" class="answers0 answers"> Forth Question </div>
+                <div id="answer0_5" onclick="choose(0,5) ; showQuestion5 ()" class="answers0 answers"> Fifth Question </div>
+			</div>
+		</div>
+	</div>
+
+    <section id="first" style = "display: none;">
+        <h2> What's your ideal weekend activity? </h2>
+        <div> Solving crimes and catching bad guys</div>
+        <div> Organizing the perfect party</div>
+        <div> Relaxing with a good book or movie</div>
+        <div> Working out and staying fit</div>
+    </section>
+    
+    <section id="second" style = "display: none;">
+        <h2> Your friends would describe you as: </h2>
+        <div> Confident and determined</div>
+        <div> Hilarious and outgoing</div>
+        <div> Loyal and easygoing</div>
+        <div> Disciplined and competitive</div>
+    </section>
+    
+    <section id="third" style = "display: none;">
+        <h2> Which quote resonates with you the most?</h2>
+        <div> "Cool, cool, cool, no doubt, no doubt, no doubt"</div>
+        <div> "I'm the human form of the 100 emoji"</div>
+        <div> "Noice! Smort!"</div>
+        <div> "Toight, like a toiger"</div>
+    </section>
+    
+    <section id="fourth" style = "display: none;">
+        <h2> Your detective skills are put to the test. What's your go-to move? </h2>
+        <div> Analyzing the crime scene meticulously</div>
+        <div> Using humor and charm to gather information</div>
+        <div> Taking a more laid-back approach, letting things unfold</div>
+        <div> Applying physical strength and agility</div>
+    </section>
+    
+    <section id="fifth" style = "display: none;">
+        <h2> What's your favorite snack during stakeouts? </h2>
+        <div> Something healthy, like carrots</div>
+        <div> Donuts, obviously</div>
+        <div> A sandwich, simple and classic</div>
+        <div> Protein bars for that extra energy boost</div>
+    </section>
+    
+    <script src="js/Quiz.js"></script>
+</body>
+</html>
