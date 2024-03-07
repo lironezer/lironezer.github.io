@@ -61,13 +61,6 @@ var selectedQuestion = 0;
 		showQuestion(0);
 	}
 
-	function chooseAnswer() {
-		getElementById()
-	}
-
-	
-
-
 	function showQuestion1 () {
 		document.getElementById("first").style.display = 'block';
 		document.getElementById("second").style.display = 'none';
