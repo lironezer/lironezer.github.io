@@ -15,56 +15,68 @@
 
 	<div id="questions">
 		<div id="question0" class="question0 question" style="display:none">
-			<div id="qimage0" class="qimage0 qimage"></div>
 			<div id="answers0" class="divanswers0 divanswers">
-				<div id="answer0_1" onclick="choose(0,1) ; showQuestion1 ()" class="answers0 answers"> First Question </div>
-				<div id="answer0_2" onclick="choose(0,2) ; showQuestion2 ()" class="answers0 answers"> Second Question </div>
-				<div id="answer0_3" onclick="choose(0,3) ; showQuestion3 ()" class="answers0 answers"> Third Question </div>
-				<div id="answer0_4" onclick="choose(0,4) ; showQuestion4 ()" class="answers0 answers"> Forth Question </div>
-                <div id="answer0_5" onclick="choose(0,5) ; showQuestion5 ()" class="answers0 answers"> Fifth Question </div>
+				<div id="answer0_1" onclick="choose(0,1) ; hideAll() ; showHideQ(1)" class="answers0 answers"> First Question </div>
+				<div id="answer0_2" onclick="choose(0,2) ; hideAll() ; showHideQ(2)" class="answers0 answers"> Second Question </div>
+				<div id="answer0_3" onclick="choose(0,3) ; hideAll() ; showHideQ(3)" class="answers0 answers"> Third Question </div>
+				<div id="answer0_4" onclick="choose(0,4) ; hideAll() ; showHideQ(4)" class="answers0 answers"> Forth Question </div>
+                <div id="answer0_5" onclick="choose(0,5) ; hideAll() ; showHideQ(5)" class="answers0 answers"> Fifth Question </div>
 			</div>
 		</div>
 	</div>
 
-    <section id="first" style = "display: none;">
+    <section id="question1" class="question1 question" style="display:none">
         <h2> What's your ideal weekend activity? </h2>
-        <div id="answer1_1" onclick="choose(1,1)"> Solving crimes and catching bad guys</div>
-        <div> Organizing the perfect party</div>
-        <div> Relaxing with a good book or movie</div>
-        <div> Working out and staying fit</div>
+        <div id="answer1_1" onclick="choose(1,1)" class="answers1 answers"> Solving crimes and catching bad guys</div>
+        <div id="answer1_2" onclick="choose(1,2)" class="answers1 answers"> Organizing the perfect party</div>
+        <div id="answer1_3" onclick="choose(1,3)" class="answers1 answers"> Relaxing with a good book or movie</div>
+        <div id="answer1_4" onclick="choose(1,4)" class="answers1 answers"> Working out and staying fit</div>
     </section>
     
-    <section id="second" style = "display: none;">
+    <section id="question2" class="question2 question" style="display:none">
         <h2> Your friends would describe you as: </h2>
-        <div> Confident and determined</div>
-        <div> Hilarious and outgoing</div>
-        <div> Loyal and easygoing</div>
-        <div> Disciplined and competitive</div>
+        <div id="answer2_1" onclick="choose(2,1)" class="answer2 answers"> Confident and determined</div>
+        <div id="answer2_2" onclick="choose(2,2)" class="answers2 answers"> Hilarious and outgoing</div>
+        <div id="answer2_3" onclick="choose(2,3)" class="answers2 answers"> Loyal and easygoing</div>
+        <div id="answer2_4" onclick="choose(2,4)" class="answers2 answers"> Disciplined and competitive</div>
     </section>
     
-    <section id="third" style = "display: none;">
+    <section id="question3" class="question3 question" style="display:none">
         <h2> Which quote resonates with you the most?</h2>
-        <div> "Cool, cool, cool, no doubt, no doubt, no doubt"</div>
-        <div> "I'm the human form of the 100 emoji"</div>
-        <div> "Noice! Smort!"</div>
-        <div> "Toight, like a toiger"</div>
+        <div id="answer3_1" onclick="choose(3,1)" class="answers3 answers"> "Cool, cool, cool, no doubt, no doubt, no doubt"</div>
+        <div id="answer3_2" onclick="choose(3,2)" class="answers3 answers"> "I'm the human form of the 100 emoji"</div>
+        <div id="answer3_3" onclick="choose(3,3)" class="answers3 answers"> "Noice! Smort!"</div>
+        <div id="answer3_4" onclick="choose(3,4)" class="answers3 answers"> "Toight, like a toiger"</div>
     </section>
     
-    <section id="fourth" style = "display: none;">
+    <section id="question4" class="question4 question" style="display:none">
         <h2> Your detective skills are put to the test. What's your go-to move? </h2>
-        <div> Analyzing the crime scene meticulously</div>
-        <div> Using humor and charm to gather information</div>
-        <div> Taking a more laid-back approach, letting things unfold</div>
-        <div> Applying physical strength and agility</div>
+        <div id="answer4_1" onclick="choose(4,1)" class="answers4 answers"> Analyzing the crime scene meticulously</div>
+        <div id="answer4_2" onclick="choose(4,2)" class="answers4 answers"> Using humor and charm to gather information</div>
+        <div id="answer4_3" onclick="choose(4,3)" class="answers4 answers"> Taking a more laid-back approach, letting things unfold</div>
+        <div id="answer4_4" onclick="choose(4,4)" class="answers4 answers"> Applying physical strength and agility</div>
     </section>
     
-    <section id="fifth" style = "display: none;">
+    <section id="question5" class="question5 question" style="display:none">
         <h2> What's your favorite snack during stakeouts? </h2>
-        <div> Something healthy, like carrots</div>
-        <div> Donuts, obviously</div>
-        <div> A sandwich, simple and classic</div>
-        <div> Protein bars for that extra energy boost</div>
+        <div id="answer5_1" onclick="choose(5,1)" class="answers5 answers"> Something healthy, like carrots</div>
+        <div id="answer5_2" onclick="choose(5,2)" class="answers5 answers"> Donuts, obviously</div>
+        <div id="answer5_3" onclick="choose(5,3)" class="answers5 answers"> A sandwich, simple and classic</div>
+        <div id="answer5_4" onclick="choose(5,4)" class="answers5 answers"> Protein bars for that extra energy boost</div>
     </section>
+
+    <button id="showResultButton" onclick="showResult()">Show Result</button>
+    <button id="startAgainButton" onclick="startAgain()">Start Again</button>
+
+
+    <section id="resultSection" style="display:none">
+        <h2> Result </h2>
+        <div id="JakeResult"></div>
+        <div id="GinaResult"></div>
+        <div id="TerryResult"></div>
+        <div id="AmyResult"></div>
+    </section>
+    
     
     <script src="js/Quiz.js"></script>
 </body>

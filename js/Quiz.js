@@ -3,9 +3,13 @@ const NO_ANSWER = 0;
 var questions;
 var selectedAnswers = [];
 var selectedQuestion = 0;
+var Jake = 0;
+var Gina = 0;
+var Terry = 0;
+var Amy = 0;
 
 	function hideAll() {
-		for (var i=0; i < questions.length; i++) {
+		for (var i=1; i < questions.length; i++) {
 			document.getElementById("question" + i).style.display = "none";
 		}
 	}
@@ -16,6 +20,20 @@ var selectedQuestion = 0;
 	
 	function showQuestion(x) {
 		document.getElementById("question" + x).style.display = "block";		
+	}
+
+	function showHideQ(x) {
+		console.log("showHideQ(" + x + "), selectedAnswer: " + selectedAnswers[x] );
+		if (x == selectedAnswers[x]) {
+			hideQuestion(x);
+			selectedAnswers[x] = NO_ANSWER;
+		} else {
+			if (selectedAnswers[x] != NO_ANSWER) {
+				hideQuestion(x);
+			}
+			showQuestion(x);
+			selectedAnswers[x] = x;
+		}
 	}
 	
 	function choose(q, a) {
@@ -29,6 +47,18 @@ var selectedQuestion = 0;
 			}
 			mark(q, a);
 			selectedAnswers[q] = a;
+			if ( a == 1) {
+				Jake += 1;
+			}
+			else if (a == 2) {
+				Gina += 1;
+			}
+			else if (a == 3) {
+				Terry += 1;
+			}
+			else if (a == 4) {
+				Amy += 1;
+			}
 		}
 	}
 
@@ -65,41 +95,48 @@ var selectedQuestion = 0;
 		getElementById()
 	}
 
+	function showResult() {
+		document.getElementById("showResultButton").style.display = "none";
+		Result();
+		document.getElementById("resultSection").style.display = "block";
+	}
 	
 
+	function Result() {
+		if (Jake > Gina && Jake > Terry && Jake > Amy) { 
+			document.getElementById("JakeResult").innerHTML = "You're Jake Peralta!";
+		}
+		else if (Gina > Jake && Gina > Terry && Gina > Amy) {
+			document.getElementById("GinaResult").innerHTML = "You're Gina Linetti!";
+		}
+		else if (Terry > Gina && Terry > Jake && Terry > Amy) {
+			document.getElementById("TerryResult").innerHTML = "You're Terry Jeffords!";
+		}
+		else if (Amy > Gina && Amy > Jake && Amy > Terry) {
+			document.getElementById("AmyResult").innerHTML = "You're Amy Santiago!";
+		}
+	}
 
-	function showQuestion1 () {
-		document.getElementById("first").style.display = 'block';
-		document.getElementById("second").style.display = 'none';
-		document.getElementById("third").style.display = 'none';
-		document.getElementById("fourth").style.display = 'none';
-		document.getElementById("fifth").style.display = 'none';
+	function startAgain() {
+		Jake = 0;
+		Gina = 0;
+		Terry = 0;
+		Amy = 0;
+
+		showQuestion(0);
+	
+		for (var i = 0; i < questions.length; i++) {
+			selectedAnswers[i] = NO_ANSWER;
+			hideQuestion(i);
+	
+			for (var j = 1; j <= 5; j++) {
+				unmark(i, j);
+			}
+		}
+	
+		document.getElementById("showResultButton").style.display = "block";
+		document.getElementById("startAgainButton").style.display = "none";
+		document.getElementById("resultSection").style.display = "none";
 	}
-	function showQuestion2 () {
-		document.getElementById("first").style.display = 'none';
-		document.getElementById("second").style.display = 'block';
-		document.getElementById("third").style.display = 'none';
-		document.getElementById("fourth").style.display = 'none';
-		document.getElementById("fifth").style.display = 'none';
-	}
-	function showQuestion3 () {
-		document.getElementById("first").style.display = 'none';
-		document.getElementById("second").style.display = 'none';
-		document.getElementById("third").style.display = 'block';
-		document.getElementById("fourth").style.display = 'none';
-		document.getElementById("fifth").style.display = 'none';
-	}
-	function showQuestion4 () {
-		document.getElementById("first").style.display = 'none';
-		document.getElementById("second").style.display = 'none';
-		document.getElementById("third").style.display = 'none';
-		document.getElementById("fourth").style.display = 'block';
-		document.getElementById("fifth").style.display = 'none';
-	}
-	function showQuestion5 () {
-		document.getElementById("first").style.display = 'none';
-		document.getElementById("second").style.display = 'none';
-		document.getElementById("third").style.display = 'none';
-		document.getElementById("fourth").style.display = 'none';
-		document.getElementById("fifth").style.display = 'block';
-	}
+	
+	

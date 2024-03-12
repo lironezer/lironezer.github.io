@@ -1,4 +1,9 @@
 var numberOfLikes = 0;
+var spans;
+
+function onloasd() {
+    spans = document.getElementsByTagName("span")
+}
 
 function addLike() {
     numberOfLikes ++;
