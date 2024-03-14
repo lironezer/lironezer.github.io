@@ -123,10 +123,10 @@ var Amy = 0;
 		Terry = 0;
 		Amy = 0;
 
-	
-		for (var i = 1; i < questions.length; i++) {
+		for (var i = 0; i < questions.length; i++) {
 			selectedAnswers[i] = NO_ANSWER;
 			hideQuestion(i);
+			showQuestion(0)
 	
 			for (var j = 1; j <= 5; j++) {
 				unmark(i, j);
@@ -136,8 +136,6 @@ var Amy = 0;
 		document.getElementById("showResultButton").style.display = "block";
 		document.getElementById("startAgainButton").style.display = "none";
 		document.getElementById("resultSection").style.display = "none";
-		showQuestion(0);
-		unmark(q, a)
 	}
 	
 	
