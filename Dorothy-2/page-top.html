@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearts</title>
+    <link rel="stylesheet" href="stylesp2.css"> 
+</head>
+<body>
+    <h1>Find It In Your Heart</h1>
+    <div class="container">
+        <img id="dorothy">
+        <img id="speech-bubble">
+        <button onclick="addLike()">
+            <img src="footage/Heart.png" alt="Like" class="heart-icon">
+        </button>
+        <p>Hearts: <span id="total">0</span></p>
+        <p><span id="gotHeart"></span></p>
+        <p><span id="gotEmotions"></span></p>
+        <a href="DorothyMain.html">
+        	<button id="bonusButton" class="bonusbutton" style="display: none;" onclick="bonusFunction()">לחזור</button>
+        </a>
+
+        <div id="inventory-box">
+            <h3>Inventory</h3>
+            <ul id="inventory-list"></ul>
+        </div>
+    
+        <script src="inventory.js"></script>
+
+    <script src="scriptp2.js"></script>
+
+    <div id="dorothy" class="dorothy"></div>
+</body>
+</html>

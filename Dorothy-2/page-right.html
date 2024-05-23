@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Conversation</title>
+    <link rel="stylesheet" href="stylesp3.css">
+</head>
+<body>
+
+<div id="container">
+    <img id="dorothy">
+</div>
+
+<div id="conversation1">
+    <div id="message"> אני שונת את החיים שלי!!!</div>
+    <button class="option-btn" onclick="reply('1')">גם אני</button>
+    <button class="option-btn" onclick="reply('2')">למה מה קרה?</button>
+</div>
+
+<div id="conversation2" style="display: none;">
+    <div id="message"> את לא מבינה! האקס שלי נפרד ממני!</div>
+    <button class="option-btn" onclick="reply('1')">חחחחחחח</button>
+    <button class="option-btn" onclick="reply('2')">יש עוד הרבה דגים בים</button>
+</div>
+
+<div id="conversation3" style="display: none;">
+    <div id="message"> את צודקת! מגיע לי יותר!</div>
+    <button class="option-btn" onclick="reply('1')">מי את בכלל?</button>
+    <button class="option-btn" onclick="reply('2')">אני פה אם את צריכה</button>
+</div>
+
+<div id="conversation4" style="display: none;">
+    <a href="DorothyMain.html">
+        <button class="conversation-button">לחזור</button>
+</a>
+</div>
+<div id="inventory-box">
+    <h3>Inventory</h3>
+    <ul id="inventory-list"></ul>
+</div>
+
+<script src="inventory.js"></script>
+<script src="scriptp3.js"></script>
+
+</body>
+</html>
