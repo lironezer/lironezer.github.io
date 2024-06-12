@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Attach event listener to reset button if it exists
         const resetButton = document.getElementById('reset-button');
         if (resetButton) {
-            resetButton.addEventListener('click', () => resetGame('https://uvyyyyyy.github.io/dorothy/courge1.html')); // Add your link here
+            resetButton.addEventListener('click', resetGame);
         }
     } catch (error) {
         console.error('An error occurred:', error);
@@ -91,21 +91,20 @@ function checkAllItemsCollected() {
     const allItemsCollected = itemsNeeded.every(item => inventory.some(invItem => invItem.name === item));
 
     if (allItemsCollected) {
-        displayMessage('https://uvyyyyyy.github.io/dorothy/courge1.html'); // Add your link here
+        displayMessage();
     }
 }
 
-function displayMessage(link) {
+function displayMessage() {
     const messageDiv = document.getElementById('message');
     if (messageDiv) {
         messageDiv.textContent = '!קיבלת רגישות!';
-        messageDiv.addEventListener('click', () => resetGame(link)); // Attach click event listener to reset the game and redirect
+        messageDiv.addEventListener('click', resetGame); // Attach click event listener to reset the game
     }
 }
 
-function resetGame(link) {
+function resetGame() {
     localStorage.clear();
     updateInventory();
     document.getElementById('message').textContent = '';
-    window.location.href = link; // Redirect to the provided link
 }
